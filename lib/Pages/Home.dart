@@ -39,7 +39,11 @@ class HomeScreen extends StatelessWidget {
               }),
             ]),
             ),
-            Text("${context.watch<CounterProvider>().count}")
+            Text("${context.watch<CounterProvider>().count}"),
+            for(int i = 0; i < context.watch<CounterProvider>().count; i++)...[
+              Text("this is text No.${i+1}."),
+              Icon(Icons.cabin)
+            ]  //what the fuck is this For Loop??????????????? SEND HELP FOR()...[]?????
           ],
           )
       );
